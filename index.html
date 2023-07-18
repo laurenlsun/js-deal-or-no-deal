@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Next Paragraph on Enter</title>
+</head>
+<body>
+  <h1>Press Enter to Display Next Paragraph</h1>
+  <div id="output"></div>
+
+  <script>
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        displayNextParagraph();
+      }
+    });
+
+    var currentParagraphIndex = 0;
+    var paragraphs = [
+      "This is the first paragraph.",
+      "This is the second paragraph.",
+      "This is the third paragraph.",
+      "This is the fourth paragraph."
+    ];
+
+    function displayNextParagraph() {
+      var outputDiv = document.getElementById('output');
+      if (currentParagraphIndex < paragraphs.length) {
+        outputDiv.innerHTML += "<p>" + paragraphs[currentParagraphIndex] + "</p>";
+        currentParagraphIndex++;
+      } else {
+        outputDiv.innerHTML += "<p>No more paragraphs to display.</p>";
+      }
+    }
+  </script>
+</body>
+</html>
