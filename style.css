@@ -1,0 +1,22 @@
+#continueBtn {
+    display: none;
+  }
+  
+ 
+.case {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border: 1px solid #999;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.case:hover {
+  background-color: #999;
+}
